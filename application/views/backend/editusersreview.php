@@ -1,6 +1,6 @@
 <section class="panel">
     <header class="panel-heading">
-        photoalbum Details
+        Users Registered 
     </header>
     <div class="panel-body">
         <form class='form-horizontal tasi-form' method='post' action='<?php echo site_url("site/editusersreviewsubmit");?>' enctype='multipart/form-data'>
@@ -27,7 +27,7 @@
                 <div class=" form-group">
                 <label class="col-sm-2 control-label" for="normal-field">Message</label>
                 <div class="col-sm-4">
-                   <img src="<?php echo $before->message?>" alt="" disabled>
+                   <img src="<?php echo $before->message;?>" alt="" disabled>
                 </div>
             </div>
                             <div class=" form-group">
@@ -54,8 +54,8 @@
             
                                                 <div class=" form-group">
                 <label class="col-sm-2 control-label" for="normal-field">certificate</label>
-                <div class="col-sm-4">
-                <input type="text" id="normal-field" class="form-control" name="phone" value='<?php echo set_value(' order ',$before->certificate);?>' disabled>
+                <div class="col-sm-10">
+                <img src="<?php echo $before->certificate;?>" alt="" class="img-responsive">
                 </div>
             </div>
         </form>

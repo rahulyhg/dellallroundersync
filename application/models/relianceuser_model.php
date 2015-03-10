@@ -24,7 +24,7 @@ return $query;
 }
 public function beforeedit1($id)
 {
-$this->db->where("id",$id);
+$this->db->where("userid",$id);
 $query=$this->db->get("reviews")->result();
 return $query;
 }

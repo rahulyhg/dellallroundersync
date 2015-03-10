@@ -74,8 +74,9 @@ $data["page"]="viewuser";
 $data["page2"]="block/userrevieewblock";
 $reviewid=$this->input->get('id');
 $data['before']=$this->relianceuser_model->beforeedit1($reviewid);
-$data["title"]="View photos";
-$this->load->view("template",$data);
+    $data["before"]->id=$reviewid;
+$data["title"]="View Reviews";
+$this->load->view("templatewith2",$data);
 
 }
 

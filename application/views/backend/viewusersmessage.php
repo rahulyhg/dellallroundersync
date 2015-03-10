@@ -36,7 +36,7 @@
         <script>
                        function drawtable(resultrow) {
                 
-                return "<tr><td>" + resultrow.id + "</td><td>" + resultrow.name + "</td><td>" + resultrow.email + "</td><td>" + resultrow.phone + "</td><td>" + resultrow.dots + "</td><td>"+resultrow.jerseyscore+"</td><td>"+resultrow.testtime+"</td><td>"+resultrow.certificate+"</td><td>"+resultrow.jerseyscore+"</td><td><a class='btn btn-primary btn-xs' href='<?php echo site_url('site/editusersreview?id=');?>" + resultrow.id + "'><i class='icon-pencil'></i></a><a class='btn btn-danger btn-xs' href='<?php echo site_url('site/deletephotos?id=');?>" + resultrow.id + "'><i class='icon-trash '></i></a></td></tr>";
+                return "<tr><td>" + resultrow.id + "</td><td>" + resultrow.name + "</td><td>" + resultrow.email + "</td><td>" + resultrow.phone + "</td><td>" + resultrow.dots + "</td><td>"+resultrow.jerseyscore+"</td><td>"+resultrow.testtime+"</td><td><img src='"+resultrow.certificate+"' width='50px' ></td><td>"+resultrow.jerseyscore+"</td><td><a class='btn btn-primary btn-xs' href='<?php echo site_url('site/editusersreview?id=');?>" + resultrow.id + "'><i class='icon-pencil'></i></a><a class='btn btn-danger btn-xs' href='<?php echo site_url('site/deletephotos?id=');?>" + resultrow.id + "'><i class='icon-trash '></i></a></td></tr>";
             }
             generatejquery("<?php echo $base_url;?>");
         </script>
