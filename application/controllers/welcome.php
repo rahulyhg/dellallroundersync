@@ -69,7 +69,7 @@ $userid2 = $user["id"];
       
 $data["message"]=$user;
 
-        $query1 = $this->db->query("INSERT INTO `reviews` (userid, flexibility, lightweight, easytocarry, allfeature, screenclarity, stylus, easytouse, otherfeature, travel, harddrive, alluse, versatile, builtinstylus, otheruse, recommend, updates) VALUES ('$ruserid','$rflexibility','$rlightweight','$reasytocarry','$rallfeature','$rscreenclarity','$rstylus', '$reasytouse','$rotherfeature', '$rtravel', '$rharddrive', '$ralluse', '$rversatile', '$rbuiltinstylus', '$rotheruse', '$rrecommend', '$rupdates')");  
+        $query1 = $this->db->query("INSERT INTO `reviews` (userid, flexibility, lightweight, easytocarry, allfeature, screenclarity, stylus, easytouse, otherfeature, travel, harddrive, alluse, versatile, builtinstylus, otheruse, recommend, updates) VALUES ('$userid','$rflexibility','$rlightweight','$reasytocarry','$rallfeature','$rscreenclarity','$rstylus', '$reasytouse','$rotherfeature', '$rtravel', '$rharddrive', '$ralluse', '$rversatile', '$rbuiltinstylus', '$rotheruse', '$rrecommend', '$rupdates')");  
         }
         $this->load->view("json",$data);
 	}
