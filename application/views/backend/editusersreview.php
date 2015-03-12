@@ -29,7 +29,7 @@
                 <div class="col-sm-4">
                    <img src="<?php echo $before->message;?>" alt="" disabled>
                 </div>
-            
+            </div>
 
                                     <div class=" form-group">
                 <label class="col-sm-2 control-label" for="normal-field">jerseyscore</label>
