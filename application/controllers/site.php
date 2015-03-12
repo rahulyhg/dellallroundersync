@@ -1573,6 +1573,41 @@ $this->feedback_model->delete($this->input->get("id"));
 $data["redirect"]="site/viewfeedback";
 $this->load->view("redirect",$data);
 }
+    
+    public function viewcertificate()
+{
+$access=array("1");
+$this->checkaccess($access);
+$data["before"]=$this->feedback_model->getallreview($this->input->get("id"));
+$this->load->view("certi",$data);
+}
+
+        public function generateexcel()
+{
+
+		$this->load->dbutil();
+		$query=$this->db->query("SELECT `id`,`name` as `Name`,`email` as `Email`,`phone` as `Phone`,`jerseyscore` as `Jersey Score`,`testtime`,flexibility,lightweight,easytocarry,allfeature,screenclarity,stylus,easytouse,otherfeature,travel,harddrive,alluse,versatile,builtinstylus,otheruse,recommend,updates
+ FROM `users` LEFT OUTER JOIN `reviews` ON `users`.`id`=`reviews`.`userid`");
+
+       $content= $this->dbutil->csv_from_result($query);
+        $timestamp=new DateTime();
+        $timestamp=$timestamp->format('Y-m-d_H.i.s');
+        //$data = 'Some file data';
+
+        if ( ! write_file("./uploads/dellallrounder_$timestamp.csv", $content))
+        {
+             echo 'Unable to write the file';
+        }
+        else
+        {
+            redirect(base_url("uploads/dellallrounder_$timestamp.csv"), 'refresh');
+             echo 'File written!';
+        }
+//        file_put_contents("gs://toykraftdealer/retailerfilefromdashboard_$timestamp.csv", $content);
+//		redirect("http://admin.toy-kraft.com/servepublic?name=retailerfilefromdashboard_$timestamp.csv", 'refresh');
+
+
+}
 
 }
 ?>

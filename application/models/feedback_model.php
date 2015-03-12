@@ -48,5 +48,13 @@ public function delete($id)
 $query=$this->db->query("DELETE FROM `reliance_feedback` WHERE `id`='$id'");
 return $query;
 }
+    
+    public function getallreview($id)
+{
+
+$query=$this->db->query("SELECT * FROM `users` LEFT OUTER JOIN `reviews` ON `users`.`id`=`reviews`.`userid` WHERE `users`.`id`='$id'")->row();
+return $query;
+}
+    
 }
 ?>
