@@ -1570,7 +1570,7 @@ public function deletefeedback()
 $access=array("1");
 $this->checkaccess($access);
 $this->feedback_model->delete($this->input->get("id"));
-$data["redirect"]="site/viewfeedback";
+$data["redirect"]="site/users_message";
 $this->load->view("redirect",$data);
 }
     

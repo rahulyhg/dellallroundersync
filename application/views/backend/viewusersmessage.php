@@ -7,10 +7,10 @@
     <div class="col-lg-12">
         <section class="panel">
             <header class="panel-heading">
-                photos Details
+                Registered Users Details
             </header>
             <div class="drawchintantable">
-                <?php $this->chintantable->createsearch("photos List");?>
+                <?php $this->chintantable->createsearch("Registered Users");?>
                 <table class="table table-striped table-hover" id="" cellpadding="0" cellspacing="0">
                     <thead>
                         <tr>
@@ -34,7 +34,7 @@
         <script>
                        function drawtable(resultrow) {
                 
-                return "<tr><td>" + resultrow.id + "</td><td>" + resultrow.name + "</td><td>" + resultrow.email + "</td><td>" + resultrow.phone + "</td><td>"+resultrow.testtime+"</td><td>"+resultrow.jerseyscore+"</td><td><a class='btn btn-primary btn-xs' href='<?php echo site_url('site/editusersreview?id=');?>" + resultrow.id + "'><i class='icon-pencil'></i></a><a class='btn btn-danger btn-xs' href='<?php echo site_url('site/deletephotos?id=');?>" + resultrow.id + "'><i class='icon-trash '></i></a></td></tr>";
+                return "<tr><td>" + resultrow.id + "</td><td>" + resultrow.name + "</td><td>" + resultrow.email + "</td><td>" + resultrow.phone + "</td><td>"+resultrow.testtime+"</td><td>"+resultrow.jerseyscore+"</td><td><a class='btn btn-primary btn-xs' href='<?php echo site_url('site/editusersreview?id=');?>" + resultrow.id + "'><i class='icon-pencil'></i></a><a class='btn btn-danger btn-xs' href='<?php echo site_url('site/deletefeedback?id=');?>" + resultrow.id + "'><i class='icon-trash '></i></a></td></tr>";
             }
             generatejquery("<?php echo $base_url;?>");
         </script>

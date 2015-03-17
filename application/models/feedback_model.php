@@ -45,7 +45,7 @@ return 1;
 }
 public function delete($id)
 {
-$query=$this->db->query("DELETE FROM `reliance_feedback` WHERE `id`='$id'");
+$query=$this->db->query("DELETE FROM `users` WHERE `id`='$id'");
 return $query;
 }
     
